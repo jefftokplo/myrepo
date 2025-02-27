@@ -1,0 +1,73 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / FLYWOOF7DUAL (FWF7) 4.1.1 Nov 15 2019 / 12:23:51 (1e5e3d369) MSP API: 1.42
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FLYWOOF7DUAL
+mcu_id 0019003c5746501120303431
+signature 
+
+# name: RED LOC FPV
+
+# map
+map TAER1234
+
+# serial
+serial 0 0 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1600 2100 0 0
+aux 1 1 1 1300 1700 0 0
+aux 2 13 2 1300 1700 0 0
+aux 3 35 3 1300 1700 0 0
+
+# master
+set gyro_to_use = FIRST
+set acc_calibration = -35,-179,-4081
+set serialrx_provider = CRSF
+set min_throttle = 1070
+set use_unsynced_pwm = OFF
+set motor_pwm_protocol = DSHOT600
+set motor_pwm_rate = 480
+set yaw_motors_reversed = ON
+set osd_vbat_pos = 14570
+set osd_current_pos = 14735
+set osd_craft_name_pos = 14570
+set name = RED LOC FPV
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

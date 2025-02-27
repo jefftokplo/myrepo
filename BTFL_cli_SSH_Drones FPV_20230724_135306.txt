@@ -1,0 +1,16 @@
+# 
+
+# set pidsum_limit_yaw
+pidsum_limit_yaw = 400
+profile 0
+Allowed range: 100 - 1000
+
+# set pidsum_limit_yaw = 800
+pidsum_limit_yaw set to 800
+# set pidsum_limit_yaw = 700
+pidsum_limit_yaw set to 700
+# set pidsum_limit = 700
+pidsum_limit set to 700
+# set pidsum_limit = 800
+pidsum_limit set to 800
+# 

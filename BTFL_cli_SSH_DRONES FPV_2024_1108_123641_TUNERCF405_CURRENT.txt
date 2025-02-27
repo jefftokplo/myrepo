@@ -1,0 +1,196 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.4.3 Nov 23 2023 / 06:42:13 (738127e7e) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name TUNERCF405
+manufacturer_id TURC
+mcu_id 002f00293233511131373431
+signature 
+
+# name: SSH Drones FPV
+
+# serial
+serial 0 131073 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+map TAER1234
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 13 2 1700 2100 0 0
+aux 3 35 3 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 1 900 1250 12 1 0 0
+adjrange 1 0 1 1275 1625 12 1 0 0
+adjrange 2 0 1 1700 2100 12 1 0 0
+
+# rxfail
+rxfail 3 s 1250
+rxfail 7 s 2000
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_lpf2_static_hz = 1000
+set dyn_notch_count = 2
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
+set acc_lpf_hz = 10
+set acc_calibration = 45,-16,7,1
+set rc_smoothing_auto_factor = 250
+set rc_smoothing_auto_factor_throttle = 100
+set rc_smoothing_setpoint_cutoff = 6
+set rc_smoothing_feedforward_cutoff = 6
+set rc_smoothing_throttle_cutoff = 20
+set blackbox_device = NONE
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set bat_capacity = 550
+set ibata_scale = 600
+set beeper_dshot_beacon_tone = 3
+set yaw_motors_reversed = ON
+set small_angle = 180
+set simplified_gyro_filter_multiplier = 200
+set report_cell_voltage = ON
+set osd_units = IMPERIAL
+set osd_cap_alarm = 500
+set osd_alt_alarm = 400
+set osd_vbat_pos = 2564
+set osd_link_quality_pos = 3531
+set osd_rssi_dbm_pos = 3563
+set osd_tim_2_pos = 3594
+set osd_throttle_pos = 2500
+set osd_craft_name_pos = 2579
+set osd_gps_speed_pos = 32
+set osd_gps_lon_pos = 17
+set osd_gps_lat_pos = 164
+set osd_gps_sats_pos = 58
+set osd_home_dir_pos = 14
+set osd_home_dist_pos = 44
+set osd_altitude_pos = 64
+set osd_warnings_pos = 14773
+set osd_avg_cell_voltage_pos = 2532
+set osd_battery_usage_pos = 2612
+set osd_sys_vtx_temp_pos = 88
+set osd_stat_bitmask = 8394276
+set osd_displayport_device = MSP
+set vcd_video_system = HD
+set gyro_1_sensor_align = CW0FLIP
+set gyro_1_align_pitch = 1800
+set gyro_1_align_yaw = 0
+set craft_name = SSH Drones FPV
+
+profile 0
+
+# profile 0
+set profile_name = UAVTech2
+set dterm_lpf1_dyn_min_hz = 101
+set dterm_lpf1_dyn_max_hz = 202
+set dterm_lpf1_type = BIQUAD
+set dterm_lpf1_static_hz = 101
+set dterm_lpf2_static_hz = 0
+set vbat_sag_compensation = 100
+set crash_recovery = ON
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set p_pitch = 74
+set i_pitch = 132
+set d_pitch = 48
+set f_pitch = 0
+set p_roll = 70
+set i_roll = 125
+set d_roll = 42
+set f_roll = 0
+set p_yaw = 70
+set i_yaw = 125
+set f_yaw = 0
+set d_min_roll = 42
+set d_min_pitch = 48
+set thrust_linear = 20
+set feedforward_smooth_factor = 40
+set feedforward_jitter_factor = 16
+set dyn_idle_min_rpm = 75
+set simplified_master_multiplier = 150
+set simplified_d_gain = 95
+set simplified_pi_gain = 105
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 0
+set simplified_dterm_filter_multiplier = 135
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set thr_mid = 0
+set thr_expo = 50
+set roll_rc_rate = 1
+set pitch_rc_rate = 8
+set yaw_rc_rate = 8
+set roll_expo = 100
+set pitch_expo = 100
+set yaw_expo = 100
+set roll_srate = 35
+set pitch_srate = 80
+set yaw_srate = 80
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 1
+set pitch_rc_rate = 1
+set yaw_rc_rate = 1
+set roll_expo = 65
+set pitch_expo = 65
+set yaw_expo = 65
+set roll_srate = 35
+set pitch_srate = 35
+set yaw_srate = 30
+
+rateprofile 2
+
+# rateprofile 2
+set roll_rc_rate = 1
+set pitch_rc_rate = 1
+set yaw_rc_rate = 1
+set roll_expo = 65
+set pitch_expo = 65
+set yaw_expo = 65
+set roll_srate = 45
+set pitch_srate = 45
+set yaw_srate = 40
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

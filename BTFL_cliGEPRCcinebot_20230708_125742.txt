@@ -1,0 +1,49 @@
+# 
+
+# diff
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.1 Jul 13 2022 / 03:36:10 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: GEPR, board_name: GEPRC_F722_AIO, version: 7bde32e9, date: 2023-01-04T07:01:51Z
+
+# start the command batch
+batch start
+
+board_name GEPRC_F722_AIO
+manufacturer_id GEPR
+
+# feature
+feature -SOFTSERIAL
+feature -RX_PARALLEL_PWM
+feature -LED_STRIP
+
+# serial
+serial 1 0 115200 57600 0 115200
+serial 3 0 115200 57600 0 115200
+serial 4 0 115200 57600 0 115200
+
+# aux
+aux 0 0 3 1550 2100 0 0
+
+# master
+set acc_calibration = -137,-126,-4076,1
+set rx_spi_protocol = EXPRESSLRS
+set align_board_yaw = 0
+set osd_units = IMPERIAL
+set osd_vbat_pos = 14560
+set osd_current_pos = 96
+set osd_mah_drawn_pos = 14400
+set osd_altitude_pos = 14349
+set osd_warnings_pos = 14825
+set osd_avg_cell_voltage_pos = 14592
+set osd_battery_usage_pos = 47136
+set osd_efficiency_pos = 14336
+
+profile 0
+
+rateprofile 0
+
+# end the command batch
+batch end
+
+# 

@@ -1,0 +1,133 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.1 Jul 13 2022 / 03:36:10 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: GEPR, board_name: GEPRC_F722_AIO, version: 7bde32e9, date: 2023-01-04T07:01:51Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name GEPRC_F722_AIO
+manufacturer_id GEPR
+mcu_id 002a00243431510432313835
+signature 
+
+# name: Cinebot30
+
+# resources
+resource LED_STRIP 1 NONE
+resource PINIO 2 A01
+
+# feature
+feature -SOFTSERIAL
+feature -RX_PARALLEL_PWM
+
+# serial
+serial 0 1 115200 57600 0 115200
+serial 3 0 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1550 2100 0 0
+aux 1 1 1 1300 1700 0 0
+aux 2 2 1 1700 2100 0 0
+aux 3 13 2 1700 2100 0 0
+aux 4 40 3 1600 2100 0 0
+
+# master
+set gyro_lpf1_static_hz = 300
+set gyro_lpf2_static_hz = 600
+set dyn_notch_count = 0
+set dyn_notch_q = 500
+set gyro_lpf1_dyn_min_hz = 300
+set gyro_lpf1_dyn_max_hz = 600
+set acc_calibration = -23,27,-24,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set min_check = 1150
+set dshot_bidir = ON
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set align_board_roll = 180
+set align_board_yaw = 0
+set vbat_max_cell_voltage = 435
+set beeper_dshot_beacon_tone = 3
+set yaw_motors_reversed = ON
+set small_angle = 180
+set deadband = 20
+set yaw_deadband = 15
+set simplified_gyro_filter_multiplier = 120
+set osd_vbat_pos = 2082
+set osd_tim_2_pos = 2114
+set osd_flymode_pos = 2103
+set osd_craft_name_pos = 2091
+set osd_warnings_pos = 2377
+set osd_displayport_device = MSP
+set debug_mode = GYRO_SCALED
+set displayport_msp_serial = 0
+set pinio_config = 129,1,1,1
+set pinio_box = 39,40,41,42
+set name = Cinebot30
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 67
+set dterm_lpf1_dyn_max_hz = 135
+set dterm_lpf1_static_hz = 67
+set dterm_lpf2_static_hz = 135
+set vbat_sag_compensation = 100
+set p_pitch = 50
+set i_pitch = 99
+set d_pitch = 50
+set f_pitch = 101
+set p_roll = 48
+set i_roll = 95
+set d_roll = 44
+set f_roll = 97
+set p_yaw = 48
+set i_yaw = 95
+set f_yaw = 97
+set d_min_roll = 37
+set d_min_pitch = 42
+set feedforward_smooth_factor = 60
+set simplified_master_multiplier = 90
+set simplified_i_gain = 110
+set simplified_d_gain = 140
+set simplified_pi_gain = 120
+set simplified_dmax_gain = 50
+set simplified_feedforward_gain = 90
+set simplified_dterm_filter_multiplier = 90
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

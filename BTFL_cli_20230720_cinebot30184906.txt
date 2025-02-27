@@ -1,0 +1,112 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.3.1 Jul 13 2022 / 03:36:10 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: GEPR, board_name: GEPRC_F722_AIO, version: 7bde32e9, date: 2023-01-04T07:01:51Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name GEPRC_F722_AIO
+manufacturer_id GEPR
+mcu_id 002a00243431510432313835
+signature 
+
+# feature
+feature -SOFTSERIAL
+feature -RX_PARALLEL_PWM
+feature -LED_STRIP
+
+# serial
+serial 3 0 115200 57600 0 115200
+serial 4 1 115200 57600 0 115200
+
+# beeper
+beeper -GPS_STATUS
+beeper -READY_BEEP
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 3 1550 2100 0 0
+aux 1 13 1 1550 2100 0 0
+
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = -15,5,-26,1
+set mag_align_yaw = 1800
+set min_check = 1000
+set rssi_channel = 8
+set rx_spi_protocol = EXPRESSLRS
+set dshot_idle_value = 700
+set dshot_bidir = ON
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set align_board_yaw = 90
+set pid_process_denom = 2
+set osd_units = IMPERIAL
+set osd_warn_gps_rescue_disabled = OFF
+set osd_vbat_pos = 14840
+set osd_flymode_pos = 2061
+set osd_current_pos = 96
+set osd_mah_drawn_pos = 64
+set osd_flight_dist_pos = 2073
+set osd_altitude_pos = 14432
+set osd_power_pos = 2282
+set osd_warnings_pos = 14825
+set osd_avg_cell_voltage_pos = 256
+set osd_battery_usage_pos = 47136
+set osd_efficiency_pos = 14336
+set vcd_video_system = 
+###ERROR IN diff: CORRUPTED CONFIG: vcd_video_system = 3###
+set gyro_1_sensor_align = CW0FLIP
+set gyro_1_align_pitch = 1800
+set gyro_1_align_yaw = 0
+
+profile 0
+
+# profile 0
+set thrust_linear = 80
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 6
+set pitch_rc_rate = 5
+set roll_expo = 60
+set pitch_expo = 60
+set yaw_expo = 62
+set roll_srate = 62
+set pitch_srate = 60
+set yaw_srate = 62
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
+# 

@@ -1,0 +1,79 @@
+# 
+
+# diff all
+
+# version
+# Betaflight / MATEKF722HD (MF7P) 4.2.9 Jul 12 2021 / 13:32:46 () MSP API: 1.43
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MATEKF722HD
+mcu_id 00170025345650022030324b
+signature 
+
+# name: DC7
+
+# feature
+feature GPS
+
+# beacon
+beacon RX_SET
+
+# map
+map TAER1234
+
+# serial
+serial 0 1 115200 57600 0 115200
+serial 3 64 115200 57600 0 115200
+
+# aux
+aux 0 0 0 1675 2100 0 0
+aux 1 1 1 1325 1575 0 0
+aux 2 13 2 1700 2100 0 0
+aux 3 35 3 1700 2100 0 0
+
+# master
+set acc_calibration = -22,50,-193,1
+set mag_hardware = NONE
+set serialrx_provider = CRSF
+set motor_pwm_protocol = DSHOT600
+set gps_provider = MSP
+set gps_set_home_point_once = ON
+set osd_units = IMPERIAL
+set osd_vbat_pos = 2282
+set osd_avg_cell_voltage_pos = 14570
+set gyro_1_sensor_align = CW180
+set gyro_1_align_pitch = 0
+set name = DC7
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
+save
+# 
