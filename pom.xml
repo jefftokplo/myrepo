@@ -34,7 +34,6 @@
     </plugin>
   </plugins>
 </build>
-</dependencies>
- 99e205c (Add Dockerfile to containerize Maven app)
+999e205c (Add Dockerfile to containerize Maven app)
 </project>
 
